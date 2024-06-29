@@ -1,4 +1,4 @@
-# lockvar
+# go-protected
 
 [![tag](https://img.shields.io/github/tag/peczenyj/go-protected.svg)](https://github.com/peczenyj/go-protected/releases)
 ![Go Version](https://img.shields.io/badge/Go-%3E%3D%201.18-%23007d9c)
@@ -16,3 +16,20 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/peczenyj/go-protected/blob/main/CONTRIBUTING.md#pull-request-process)
 
 yet another mutex-protected variable in golang
+
+## usage
+
+```go
+    lockVar := goprotected.New(new(int)) // import "github.com/peczenyj/go-protected"
+
+    lockVar.Use(func(i *int) {
+        *i++
+    })
+
+    lockVar.Use(func(i *int) {
+        fmt.Println("got i=", *i)
+    })
+
+    // Output:
+    // got i= 1
+```
