@@ -7,16 +7,31 @@ import (
 )
 
 func ExampleNew() {
-	lockVar := goprotected.New(new(int))
+	protectedVar := goprotected.New(new(int))
 
-	lockVar.Use(func(i *int) {
+	protectedVar.Use(func(i *int) {
 		*i++
 	})
 
-	lockVar.Use(func(i *int) {
+	protectedVar.Use(func(i *int) {
 		fmt.Println("got i=", *i)
 	})
 
 	// Output:
 	// got i= 1
+}
+
+func ExampleNewRW() {
+	rwProtectedVar := goprotected.NewRW(new(int))
+
+	rwProtectedVar.Use(func(i *int) {
+		*i += 5
+	})
+
+	rwProtectedVar.RUse(func(i *int) {
+		fmt.Println("[read-only] got i=", *i)
+	})
+
+	// Output:
+	// [read-only] got i= 5
 }
