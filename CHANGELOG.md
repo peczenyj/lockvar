@@ -1,4 +1,14 @@
+## What's Changed in v0.1.0
+* add read-write mutex based protected var
+* Merge pull request #5 from peczenyj/dependabot/github_actions/codecov/codecov-action-5.1.2
+* Merge branch 'main' into dependabot/github_actions/codecov/codecov-action-5.1.2
+* Update lint.yml
+* Bump codecov/codecov-action from 4.5.0 to 5.1.2
+
+**Full Changelog**: https://github.com///compare/v0.0.1...v0.1.0
+
 ## What's Changed in v0.0.1
+* update docs
 * initial commit
 * Initial commit
 
