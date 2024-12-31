@@ -1,4 +1,10 @@
+## What's Changed
+* add semaphore protected var
+* fix yaml lint issues
+* enable tests with go 1.23.x
+
 ## What's Changed in v0.1.0
+* bump version to v0.1.0
 * add read-write mutex based protected var
 * Merge pull request #5 from peczenyj/dependabot/github_actions/codecov/codecov-action-5.1.2
 * Merge branch 'main' into dependabot/github_actions/codecov/codecov-action-5.1.2
