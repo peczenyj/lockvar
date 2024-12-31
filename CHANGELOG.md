@@ -1,7 +1,15 @@
-## What's Changed
+## What's Changed in v0.2.0
+* small doc improvement
+* Merge pull request #6 from peczenyj/add-semaphore-protected-var
+* fix examples
+* add more examples
+* add unit test
+* update changelog
 * add semaphore protected var
 * fix yaml lint issues
 * enable tests with go 1.23.x
+
+**Full Changelog**: https://github.com///compare/v0.1.0...v0.2.0
 
 ## What's Changed in v0.1.0
 * bump version to v0.1.0
