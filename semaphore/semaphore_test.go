@@ -36,10 +36,10 @@ func ExampleProtectedVar_TryUse() {
 		fmt.Println("got i=", *i) // will never be called
 	})
 
-	fmt.Printf("TryUse returns %t", success)
+	fmt.Printf("TryUse method returns: %t", success)
 
 	// Output:
-	// TryUse returns false
+	// TryUse method returns: false
 }
 
 func ExampleProtectedVar_Use() {
@@ -52,8 +52,8 @@ func ExampleProtectedVar_Use() {
 		fmt.Println("got i=", *i) // will never be called
 	})
 
-	fmt.Printf("Use returns %v", err)
+	fmt.Printf("Use method returns error: %v", err)
 
 	// Output:
-	// Use returns context deadline exceeded
+	// Use method returns error: context deadline exceeded
 }
