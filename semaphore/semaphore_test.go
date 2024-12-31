@@ -23,3 +23,20 @@ func ExampleNew() {
 	// Output:
 	// got i= 1
 }
+
+func ExampleProtectedVar_TryUse() {
+	protectedVar := semaphore.New(new(int), 1)
+
+	ctx := context.Background()
+
+	protectedVar.Use(ctx, 1, func(i *int) {
+		*i++
+	})
+
+	protectedVar.TryUse(1, func(i *int) {
+		fmt.Println("got i=", *i)
+	})
+
+	// Output:
+	// got i= 1
+}
