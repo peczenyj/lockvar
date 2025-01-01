@@ -7,7 +7,7 @@ import (
 )
 
 // ProtectedVar is a go protected var but uses a weighted semaphore.
-// It is build around [golang.org/x/sync/semaphore]
+// It is build around [golang.org/x/sync/semaphore].
 type ProtectedVar[T any] struct {
 	variable T
 	weighted *semaphore.Weighted
